@@ -8,7 +8,7 @@ import java.util.*;
  *Application to sort an array of random numbers. 
  *
  *Program 1 
- *@author Erika Yardumian - CPSC - 3273
+ *@author Erika Yardumian 
  *@version 3/29/19
  */
 
@@ -16,9 +16,6 @@ public class CollectDataTwo {
       
    static void Merge(int A[], int p, int q, int r) {
       //System.out.println(Arrays.toString(A));
-      //System.out.println(p);
-      //System.out.println(q);
-      //System.out.println(r);
       int n1 = q - p + 1;
       int n2 = r - q;
       int L[] = new int[n1 +1];
@@ -44,9 +41,7 @@ public class CollectDataTwo {
             j = j+1;
          }
          //System.out.println(Arrays.toString(A));
-      
-      }
-              
+      }            
    }
    
    static void MergeSort(int A[],int p, int r) {
@@ -58,11 +53,10 @@ public class CollectDataTwo {
       }
    }
 
-   
    public static void main(String[] args) {
-   //Generates random numbers.
+      //Generates random numbers.
       Random random = new Random();
-   //Array to store 1000 random values.
+      //Array to store 1000 random values.
       int[] G = new int[100000];
       int[] A = new int[100000];
       int maxvalue = 100000;
@@ -76,7 +70,7 @@ public class CollectDataTwo {
          G[i] = random.nextInt(maxvalue);
       }        
       for (n = 10; n < G.length + 1; n += 1000) { 
-      //Copies values from array G to array A.
+         //Copies values from array G to array A.
          for (int k = 0; k < n; k++) {
             A[k] = G[k];
          }
@@ -84,10 +78,10 @@ public class CollectDataTwo {
       
          //Start timing 
          long startTime = System.nanoTime();
-      //Sorts array A. 
+         //Sorts array A. 
          MergeSort(A, 0, n - 1);
       
-      //End timing.
+         //End timing.
          long endTime = System.nanoTime();
          counter++;
          long totalTime = endTime - startTime;
